@@ -1,0 +1,1008 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #ebe8e5;
+  overflow: hidden; }
+  body .step {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ebe8e5;
+    transform: translate(101vw);
+    transition: .8s ease; }
+    body .step.step-active {
+      transform: translate(0);
+      transition: .8s ease; }
+    body .step.step-active-left {
+      transform: translate(-101vw);
+      transition: .8s ease; }
+  body .title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #ff6100;
+    padding-top: 50px;
+    text-align: center; }
+    @media screen and (max-width: 1400px) {
+      body .title {
+        padding-top: 30px; } }
+    @media screen and (max-width: 1255px) {
+      body .title {
+        font-size: 34px; } }
+  body .cta {
+    text-align: center; }
+    body .cta button {
+      position: relative;
+      display: inline-block;
+      width: 300px;
+      height: 45px;
+      font-weight: 700;
+      font-size: 17px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.8s ease-in-out;
+      margin-bottom: 30px; }
+      body .cta button:hover {
+        transform: scale(1.1);
+        transition: 0.6s ease-in-out; }
+    body .cta--blue {
+      background: #364c5c;
+      color: #fff;
+      border: none; }
+    body .cta--transp {
+      background: transparent;
+      color: #364c5c;
+      border: 3px solid #364c5c;
+      margin-left: 40px; }
+    body .cta--orange {
+      background: #f55d00bd;
+      color: #fff;
+      border: 3px solid #e46f3c;
+      width: 95% !important; }
+      body .cta--orange.save:hover {
+        transform: scale(1); }
+    body .cta.cta--arrow .cta--blue:after {
+      content: "";
+      display: inline-block;
+      width: 51px;
+      height: 40px;
+      position: absolute;
+      top: 4px;
+      right: 60px;
+      background: url("../images/cta-arrow.png") no-repeat center; }
+    body .cta .cta--back {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: none;
+      opacity: 0.7;
+      transition: 0.6s ease-in-out; }
+      body .cta .cta--back:hover {
+        opacity: 1;
+        transition: 0.4s ease-in-out; }
+  body main #step1 {
+    background: url("../images/espelhos-backgroundimg.png") no-repeat top center;
+    background-size: cover; }
+    body main #step1 .text {
+      display: block;
+      position: absolute;
+      top: 150px;
+      left: 100px; }
+      @media screen and (max-width: 1400px) {
+        body main #step1 .text {
+          top: 90px; } }
+      body main #step1 .text--blue {
+        font-size: 50px;
+        font-weight: 300;
+        color: #1b303b;
+        font-family: 'Roboto Condensed', sans-serif;
+        margin-bottom: 5px; }
+      body main #step1 .text--orange {
+        font-size: 60px;
+        font-weight: 700;
+        color: #ff6100;
+        font-family: 'Roboto Condensed', sans-serif;
+        margin-bottom: 5px; }
+      body main #step1 .text:before {
+        content: "";
+        width: 9px;
+        height: 440px;
+        display: block;
+        position: absolute;
+        left: -40px;
+        top: -50px;
+        background: #ff6100; }
+        @media screen and (max-width: 1400px) {
+          body main #step1 .text:before {
+            height: 400px;
+            top: -30px; } }
+    body main #step1 .cta {
+      position: absolute;
+      bottom: 60px;
+      left: 0;
+      right: 0;
+      width: 650px;
+      margin: 0 auto; }
+      @media screen and (max-width: 1400px) {
+        body main #step1 .cta {
+          bottom: 60px; } }
+    body main #step1 .popup {
+      position: relative;
+      background: #364c5cc7;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      font-weight: bold; }
+      body main #step1 .popup.hidden {
+        display: none; }
+      body main #step1 .popup .close {
+        position: absolute;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background: url(../images/close.png) no-repeat;
+        background-size: contain;
+        top: 100px;
+        right: 100px;
+        cursor: pointer;
+        z-index: 999; }
+      body main #step1 .popup .recoverForm {
+        display: block;
+        align-self: center;
+        width: 400px;
+        height: 200px; }
+        body main #step1 .popup .recoverForm.hide {
+          display: none; }
+        body main #step1 .popup .recoverForm input {
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+          margin-bottom: 20px;
+          height: 60px;
+          font-weight: 700;
+          font-size: 16px;
+          outline: none;
+          cursor: pointer;
+          text-align: center; }
+          body main #step1 .popup .recoverForm input.submit {
+            background: #364c5c;
+            color: #fff;
+            border: none;
+            transition: 0.6s ease-in-out; }
+            body main #step1 .popup .recoverForm input.submit:hover {
+              transform: scale(1.1); }
+      body main #step1 .popup .loading-image {
+        display: block;
+        position: fixed;
+        width: 70px;
+        height: 110px;
+        background: url("../images/tenor.gif") no-repeat top center;
+        background-size: contain;
+        align-self: center;
+        visibility: visible;
+        z-index: 100; }
+        body main #step1 .popup .loading-image.hide {
+          display: none; }
+      body main #step1 .popup .status-msg {
+        align-self: center;
+        color: #fff;
+        font-size: 28px; }
+        body main #step1 .popup .status-msg.hide {
+          display: none; }
+      body main #step1 .popup .recoverList {
+        display: block;
+        width: 50vw;
+        height: 50vh;
+        background-color: rgba(255, 255, 255, 0.8);
+        align-self: center;
+        border-radius: 6px;
+        box-shadow: 0 0 3px 5px #364c5c9e;
+        color: #364c5c;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-y: scroll; }
+        body main #step1 .popup .recoverList.hide {
+          display: none; }
+        body main #step1 .popup .recoverList .switch--final--composition--itens a,
+        body main #step1 .popup .recoverList .switch--final--composition--itens--modules a {
+          display: flex;
+          align-items: center;
+          text-decoration: none; }
+        body main #step1 .popup .recoverList .switch--final--composition--itens img,
+        body main #step1 .popup .recoverList .switch--final--composition--itens--modules img {
+          width: 15%;
+          display: inline-block;
+          border: 1px solid #e4e4e3; }
+        body main #step1 .popup .recoverList .switch--final--composition--itens figcaption,
+        body main #step1 .popup .recoverList .switch--final--composition--itens--modules figcaption {
+          display: inline-block;
+          width: 70%;
+          color: #364c5c;
+          vertical-align: top;
+          margin: 0 0 0 15px;
+          text-transform: capitalize;
+          font-weight: 300; }
+        body main #step1 .popup .recoverList p {
+          margin: 10px 0; }
+        body main #step1 .popup .recoverList .recoverListAppend {
+          display: flex;
+          height: 100%;
+          flex-direction: column; }
+          body main #step1 .popup .recoverList .recoverListAppend .recoverError {
+            width: 100%;
+            align-self: center;
+            text-align: center; }
+  body main #step2 .switches {
+    position: relative;
+    display: block;
+    width: 1000px;
+    height: 400px;
+    margin: 90px auto 70px; }
+    @media screen and (max-width: 1400px) {
+      body main #step2 .switches {
+        margin: 20px auto 35px;
+        height: 330px; } }
+    body main #step2 .switches ul .slick-list {
+      overflow: hidden;
+      width: 1000px;
+      margin: 0 auto;
+      padding: 15px 0 !important; }
+      @media screen and (max-width: 1064px) {
+        body main #step2 .switches ul .slick-list {
+          width: 700px; } }
+      body main #step2 .switches ul .slick-list .slick-track {
+        padding: 15px 0; }
+        body main #step2 .switches ul .slick-list .slick-track li {
+          display: inline-block;
+          vertical-align: top;
+          outline: none;
+          transform: scale(0.7);
+          padding: 5px; }
+          @media screen and (max-width: 1400px) {
+            body main #step2 .switches ul .slick-list .slick-track li {
+              transform: scale(0.6); } }
+          body main #step2 .switches ul .slick-list .slick-track li img {
+            max-width: 100%; }
+          body main #step2 .switches ul .slick-list .slick-track li figcaption {
+            text-align: center;
+            padding: 10px;
+            line-height: 1.5rem; }
+          body main #step2 .switches ul .slick-list .slick-track li.slick-center {
+            border: 2px solid #ff61006b;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 1px #ff610085;
+            transform: scale(1.1);
+            transition: .8s ease; }
+            @media screen and (max-width: 1400px) {
+              body main #step2 .switches ul .slick-list .slick-track li.slick-center {
+                transform: scale(0.9); } }
+    body main #step2 .switches .slick-arrow {
+      position: absolute;
+      top: 140px;
+      font-size: 0;
+      width: 51px;
+      height: 51px;
+      border: none;
+      outline: none;
+      z-index: 1;
+      cursor: pointer;
+      transition: .4s ease; }
+      body main #step2 .switches .slick-arrow.slick-prev {
+        left: 0;
+        background: url("../images/arrow-left.png") no-repeat center; }
+        @media screen and (max-width: 1064px) {
+          body main #step2 .switches .slick-arrow.slick-prev {
+            left: 100px; } }
+      body main #step2 .switches .slick-arrow.slick-next {
+        right: 0;
+        background: url("../images/arrow-right.png") no-repeat center; }
+        @media screen and (max-width: 1064px) {
+          body main #step2 .switches .slick-arrow.slick-next {
+            right: 100px; } }
+      body main #step2 .switches .slick-arrow:hover {
+        transform: scale(1.1);
+        transition: .4s ease; }
+  body main #step3 .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center; }
+    @media screen and (max-width: 1064px) {
+      body main #step3 .wrapper {
+        width: 100%; } }
+    body main #step3 .wrapper .modules, body main #step3 .wrapper .organize {
+      display: inline-block;
+      vertical-align: top;
+      background: #fff;
+      text-align: left;
+      box-sizing: border-box; }
+    body main #step3 .wrapper .modules {
+      width: 550px;
+      height: 550px;
+      margin: 20px 0;
+      padding: 20px 10px; }
+      @media screen and (max-width: 1400px) {
+        body main #step3 .wrapper .modules {
+          width: 500px;
+          height: 500px; } }
+      @media screen and (max-width: 1255px) {
+        body main #step3 .wrapper .modules {
+          margin: 5px; } }
+      @media screen and (max-width: 1150px) {
+        body main #step3 .wrapper .modules {
+          width: 480px; } }
+      body main #step3 .wrapper .modules p {
+        padding-left: 25px; }
+      body main #step3 .wrapper .modules ul {
+        list-style: none; }
+        body main #step3 .wrapper .modules ul li {
+          display: inline-block;
+          width: 31%;
+          margin: 1px;
+          text-align: center;
+          font-size: .6rem;
+          min-height: 107px;
+          vertical-align: top;
+          transition: 0.2s ease; }
+          body main #step3 .wrapper .modules ul li img {
+            width: 110px;
+            cursor: pointer; }
+            @media screen and (max-width: 1400px) {
+              body main #step3 .wrapper .modules ul li img {
+                width: 100px; } }
+          body main #step3 .wrapper .modules ul li:hover {
+            box-shadow: 0 0px 9px 3px #efefef;
+            transition: 0.4s ease; }
+      body main #step3 .wrapper .modules-list {
+        display: none; }
+        body main #step3 .wrapper .modules-list.active {
+          display: block; }
+        body main #step3 .wrapper .modules-list .hide {
+          display: none; }
+    body main #step3 .wrapper .organize {
+      width: 550px;
+      height: 550px;
+      margin: 20px 30px;
+      padding: 20px 30px; }
+      @media screen and (max-width: 1400px) {
+        body main #step3 .wrapper .organize {
+          width: 480px;
+          height: 500px; } }
+      @media screen and (max-width: 1255px) {
+        body main #step3 .wrapper .organize {
+          margin: 5px; } }
+      body main #step3 .wrapper .organize--switch {
+        display: none;
+        position: relative; }
+        body main #step3 .wrapper .organize--switch.activeSwitch {
+          display: block;
+          z-index: 10; }
+        body main #step3 .wrapper .organize--switch--img {
+          width: 100%; }
+        body main #step3 .wrapper .organize--switch--module {
+          width: 100%; }
+        body main #step3 .wrapper .organize--switch--placeholder {
+          display: block;
+          position: absolute;
+          width: 100px;
+          height: 65px;
+          border-radius: 3px; }
+          @media screen and (min-width: 1400px) {
+            body main #step3 .wrapper .organize--switch--placeholder {
+              width: 110px;
+              height: 71px; } }
+          body main #step3 .wrapper .organize--switch--placeholder.ui-droppable-active {
+            box-shadow: 0px 0px 8px 1px #ff6100; }
+          body main #step3 .wrapper .organize--switch--placeholder.fill {
+            z-index: -1; }
+          body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050392 {
+            top: 105px;
+            left: 160px; }
+            body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050392.fill:after {
+              content: "";
+              display: inline-block;
+              width: 82px;
+              height: 42px;
+              border: 2px solid #4CAF50;
+              position: absolute;
+              top: 8px;
+              left: 7px; }
+            @media screen and (min-width: 1400px) {
+              body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050392 {
+                top: 124px;
+                left: 190px; }
+                body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050392.fill:after {
+                  width: 93px;
+                  height: 49px; } }
+          body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050394--1 {
+            top: 60px;
+            left: 160px; }
+            body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050394--1.fill:after {
+              content: "";
+              display: inline-block;
+              width: 82px;
+              height: 42px;
+              border: 2px solid #4CAF50;
+              position: absolute;
+              top: 7px;
+              left: 7px; }
+            @media screen and (min-width: 1400px) {
+              body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050394--1 {
+                top: 70px;
+                left: 190px; }
+                body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050394--1.fill:after {
+                  width: 93px;
+                  height: 51px; } }
+          body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050394--2 {
+            top: 150px;
+            left: 160px; }
+            body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050394--2.fill:after {
+              content: "";
+              display: inline-block;
+              width: 82px;
+              height: 42px;
+              border: 2px solid #4CAF50;
+              position: absolute;
+              top: 9px;
+              left: 7px; }
+            @media screen and (min-width: 1400px) {
+              body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050394--2 {
+                top: 176px;
+                left: 190px; }
+                body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050394--2.fill:after {
+                  width: 93px;
+                  height: 51px; } }
+          body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--1 {
+            top: 62px;
+            left: 118px;
+            width: 95px; }
+            body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--1.fill:after {
+              content: "";
+              display: inline-block;
+              width: 78px;
+              height: 42px;
+              border: 2px solid #4CAF50;
+              position: absolute;
+              top: 8px;
+              left: 5px; }
+            @media screen and (min-width: 1400px) {
+              body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--1 {
+                top: 74px;
+                left: 139px;
+                width: 103px; }
+                body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--1.fill:after {
+                  width: 90px;
+                  height: 48px; } }
+          body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--2 {
+            top: 108px;
+            left: 118px;
+            width: 95px; }
+            body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--2.fill:after {
+              content: "";
+              display: inline-block;
+              width: 78px;
+              height: 42px;
+              border: 2px solid #4CAF50;
+              position: absolute;
+              top: 7px;
+              left: 5px; }
+            @media screen and (min-width: 1400px) {
+              body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--2 {
+                top: 125px;
+                left: 139px;
+                width: 103px; }
+                body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--2.fill:after {
+                  width: 90px;
+                  height: 48px; } }
+          body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--3 {
+            top: 153px;
+            left: 118px;
+            width: 95px; }
+            body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--3.fill:after {
+              content: "";
+              display: inline-block;
+              width: 78px;
+              height: 40px;
+              border: 2px solid #4CAF50;
+              position: absolute;
+              top: 6px;
+              left: 5px; }
+            @media screen and (min-width: 1400px) {
+              body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--3 {
+                top: 177px;
+                left: 139px;
+                width: 103px; }
+                body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--3.fill:after {
+                  width: 90px;
+                  height: 48px; } }
+          body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--4 {
+            top: 62px;
+            right: 118px;
+            width: 95px; }
+            body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--4.fill:after {
+              content: "";
+              display: inline-block;
+              width: 78px;
+              height: 42px;
+              border: 2px solid #4CAF50;
+              position: absolute;
+              top: 8px;
+              left: 8px; }
+            @media screen and (min-width: 1400px) {
+              body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--4 {
+                top: 74px;
+                right: 141px;
+                width: 103px; }
+                body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--4.fill:after {
+                  width: 88px;
+                  height: 46px; } }
+          body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--5 {
+            top: 108px;
+            right: 118px;
+            width: 95px; }
+            body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--5.fill:after {
+              content: "";
+              display: inline-block;
+              width: 78px;
+              height: 42px;
+              border: 2px solid #4CAF50;
+              position: absolute;
+              top: 7px;
+              left: 8px; }
+            @media screen and (min-width: 1400px) {
+              body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--5 {
+                top: 125px;
+                right: 141px;
+                width: 103px; }
+                body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--5.fill:after {
+                  width: 88px;
+                  height: 46px; } }
+          body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--6 {
+            top: 153px;
+            right: 118px;
+            width: 95px; }
+            body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--6.fill:after {
+              content: "";
+              display: inline-block;
+              width: 78px;
+              height: 40px;
+              border: 2px solid #4CAF50;
+              position: absolute;
+              top: 6px;
+              left: 8px; }
+            @media screen and (min-width: 1400px) {
+              body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--6 {
+                top: 178px;
+                right: 141px;
+                width: 103px; }
+                body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050399--6.fill:after {
+                  width: 88px;
+                  height: 46px; } }
+          body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050387--1 {
+            top: 62px;
+            left: 164px;
+            width: 90px; }
+            body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050387--1.fill:after {
+              content: "";
+              display: inline-block;
+              width: 79px;
+              height: 40px;
+              border: 2px solid #4CAF50;
+              position: absolute;
+              top: 10px;
+              left: 4px; }
+            @media screen and (min-width: 1400px) {
+              body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050387--1 {
+                top: 75px;
+                left: 192px;
+                width: 105px; }
+                body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050387--1.fill:after {
+                  width: 92px;
+                  height: 48px; } }
+          body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050387--2 {
+            top: 109px;
+            left: 164px;
+            width: 90px; }
+            body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050387--2.fill:after {
+              content: "";
+              display: inline-block;
+              width: 79px;
+              height: 40px;
+              border: 2px solid #4CAF50;
+              position: absolute;
+              top: 6px;
+              left: 4px; }
+            @media screen and (min-width: 1400px) {
+              body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050387--2 {
+                top: 128px;
+                left: 192px;
+                width: 105px; }
+                body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050387--2.fill:after {
+                  width: 92px;
+                  height: 48px; } }
+          body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050387--3 {
+            top: 152px;
+            left: 164px;
+            width: 90px; }
+            body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050387--3.fill:after {
+              content: "";
+              display: inline-block;
+              width: 79px;
+              height: 40px;
+              border: 2px solid #4CAF50;
+              position: absolute;
+              top: 6px;
+              left: 4px; }
+            @media screen and (min-width: 1400px) {
+              body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050387--3 {
+                top: 177px;
+                left: 192px;
+                width: 105px; }
+                body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050387--3.fill:after {
+                  width: 92px;
+                  height: 48px; } }
+          body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050394B--1 {
+            top: 80px;
+            left: 160px; }
+            body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050394B--1.fill:after {
+              content: "";
+              display: inline-block;
+              width: 82px;
+              height: 43px;
+              border: 2px solid #4CAF50;
+              position: absolute;
+              top: 10px;
+              left: 8px; }
+            @media screen and (min-width: 1400px) {
+              body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050394B--1 {
+                top: 96px;
+                left: 191px; }
+                body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050394B--1.fill:after {
+                  width: 91px;
+                  height: 50px; } }
+          body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050394B--2 {
+            top: 128px;
+            left: 160px; }
+            body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050394B--2.fill:after {
+              content: "";
+              display: inline-block;
+              width: 82px;
+              height: 43px;
+              border: 2px solid #4CAF50;
+              position: absolute;
+              top: 9px;
+              left: 8px; }
+            @media screen and (min-width: 1400px) {
+              body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050394B--2 {
+                top: 151px;
+                left: 191px; }
+                body main #step3 .wrapper .organize--switch--placeholder.placeholder--35050394B--2.fill:after {
+                  width: 91px;
+                  height: 50px; } }
+      body main #step3 .wrapper .organize .cta--transp {
+        margin-left: 0;
+        margin-bottom: 10px; }
+      body main #step3 .wrapper .organize .cta--blue {
+        opacity: 0.3;
+        pointer-events: none; }
+        body main #step3 .wrapper .organize .cta--blue.nextstep {
+          opacity: 1;
+          pointer-events: visible; }
+  body main #step4 {
+    background: url("../images/espelhos-backgroundimg.png") no-repeat top center;
+    background-size: cover; }
+    body main #step4 .switch--final {
+      display: inline-block;
+      width: 400px;
+      height: 80vh;
+      background: #fff;
+      margin: 60px 160px; }
+      body main #step4 .switch--final--choice {
+        height: 290px; }
+        body main #step4 .switch--final--choice .organize--switch {
+          display: none;
+          position: relative; }
+          body main #step4 .switch--final--choice .organize--switch.activeSwitch {
+            display: block; }
+          body main #step4 .switch--final--choice .organize--switch img {
+            width: 100%; }
+            body main #step4 .switch--final--choice .organize--switch img.organize--switch--img {
+              position: absolute;
+              z-index: 10; }
+          body main #step4 .switch--final--choice .organize--switch--placeholder {
+            display: block;
+            position: absolute;
+            height: 65px;
+            border-radius: 3px; }
+            @media screen and (min-width: 1400px) {
+              body main #step4 .switch--final--choice .organize--switch--placeholder {
+                width: 110px;
+                height: 71px; } }
+            body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050392 {
+              top: 100px;
+              left: 155px;
+              width: 90px; }
+              @media screen and (min-width: 1400px) {
+                body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050392 {
+                  top: 103px; } }
+            body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050394--1 {
+              top: 58px;
+              left: 155px;
+              width: 90px; }
+              @media screen and (min-width: 1400px) {
+                body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050394--1 {
+                  top: 58px;
+                  left: 155px; } }
+            body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050394--2 {
+              top: 144px;
+              left: 155px;
+              width: 90px; }
+              @media screen and (min-width: 1400px) {
+                body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050394--2 {
+                  top: 144px;
+                  left: 155px; } }
+            body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050399--1 {
+              top: 61px;
+              left: 115px;
+              width: 86px; }
+              @media screen and (min-width: 1400px) {
+                body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050399--1 {
+                  top: 61px;
+                  left: 115px; } }
+            body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050399--2 {
+              top: 101px;
+              left: 115px;
+              width: 86px; }
+              @media screen and (min-width: 1400px) {
+                body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050399--2 {
+                  top: 102px;
+                  left: 115px; } }
+            body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050399--3 {
+              top: 144px;
+              left: 115px;
+              width: 86px; }
+              @media screen and (min-width: 1400px) {
+                body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050399--3 {
+                  top: 145px;
+                  left: 115px; } }
+            body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050399--4 {
+              top: 58px;
+              right: 115px;
+              width: 86px; }
+              @media screen and (min-width: 1400px) {
+                body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050399--4 {
+                  top: 61px; } }
+            body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050399--5 {
+              top: 101px;
+              right: 115px;
+              width: 86px; }
+              @media screen and (min-width: 1400px) {
+                body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050399--5 {
+                  top: 102px; } }
+            body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050399--6 {
+              top: 144px;
+              right: 115px;
+              width: 86px; }
+              @media screen and (min-width: 1400px) {
+                body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050399--6 {
+                  top: 145px; } }
+            body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050387--1 {
+              top: 58px;
+              left: 156px;
+              width: 88px; }
+              @media screen and (min-width: 1400px) {
+                body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050387--1 {
+                  top: 61px; } }
+            body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050387--2 {
+              top: 101px;
+              left: 156px;
+              width: 88px; }
+              @media screen and (min-width: 1400px) {
+                body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050387--2 {
+                  top: 101px; } }
+            body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050387--3 {
+              top: 142px;
+              left: 156px;
+              width: 88px; }
+              @media screen and (min-width: 1400px) {
+                body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050387--3 {
+                  top: 143px; } }
+            body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050394B--1 {
+              top: 80px;
+              left: 156px;
+              width: 90px; }
+              @media screen and (min-width: 1400px) {
+                body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050394B--1 {
+                  top: 78px; } }
+            body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050394B--2 {
+              top: 124px;
+              left: 156px;
+              width: 90px; }
+              @media screen and (min-width: 1400px) {
+                body main #step4 .switch--final--choice .organize--switch--placeholder.placeholder--35050394B--2 {
+                  top: 124px; } }
+        body main #step4 .switch--final--choice.hide {
+          display: none; }
+      body main #step4 .switch--final--composition {
+        overflow-y: scroll;
+        height: 48vh;
+        padding: 35px 35px 10px 35px;
+        margin-bottom: 30px; }
+        body main #step4 .switch--final--composition.hide {
+          display: none; }
+        body main #step4 .switch--final--composition--title {
+          text-align: center;
+          color: #364c5c;
+          font-weight: bold;
+          font-size: 18px;
+          margin-bottom: 20px; }
+        body main #step4 .switch--final--composition--itens--switch, body main #step4 .switch--final--composition--itens--modules {
+          margin-bottom: 15px; }
+          body main #step4 .switch--final--composition--itens--switch img, body main #step4 .switch--final--composition--itens--modules img {
+            width: 25%;
+            display: inline-block;
+            border: 1px solid #e4e4e3; }
+          body main #step4 .switch--final--composition--itens--switch figcaption, body main #step4 .switch--final--composition--itens--modules figcaption {
+            display: inline-block;
+            width: 70%;
+            color: #364c5c;
+            vertical-align: top;
+            margin: 0 0 0 5px;
+            text-transform: capitalize; }
+          body main #step4 .switch--final--composition--itens--switch--item, body main #step4 .switch--final--composition--itens--modules--item {
+            margin-bottom: 15px; }
+            body main #step4 .switch--final--composition--itens--switch--item:hover img, body main #step4 .switch--final--composition--itens--modules--item:hover img {
+              border: 1px solid #da571e; }
+            body main #step4 .switch--final--composition--itens--switch--item:hover figcaption, body main #step4 .switch--final--composition--itens--modules--item:hover figcaption {
+              color: #da571e;
+              font-weight: bold; }
+        body main #step4 .switch--final--composition--itens--switch:hover img {
+          border: 1px solid #da571e; }
+        body main #step4 .switch--final--composition--itens--switch:hover figcaption {
+          color: #da571e;
+          font-weight: bold; }
+      body main #step4 .switch--final--other {
+        overflow-y: scroll;
+        height: 48vh;
+        padding: 35px 35px 10px 35px;
+        margin-bottom: 30px; }
+        body main #step4 .switch--final--other.hide {
+          display: none; }
+        body main #step4 .switch--final--other--title {
+          text-align: center;
+          color: #364c5c;
+          font-weight: bold;
+          font-size: 18px;
+          margin-bottom: 20px; }
+        body main #step4 .switch--final--other--subtitle {
+          color: #da571e;
+          font-weight: bold;
+          font-size: 16px;
+          margin: 20px 0; }
+        body main #step4 .switch--final--other--switches--list {
+          list-style: none; }
+          body main #step4 .switch--final--other--switches--list .switches__display--item {
+            margin-bottom: 15px; }
+            body main #step4 .switch--final--other--switches--list .switches__display--item img {
+              width: 25%;
+              display: inline-block;
+              border: 1px solid #e4e4e3; }
+            body main #step4 .switch--final--other--switches--list .switches__display--item figcaption {
+              display: inline-block;
+              width: 70%;
+              color: #364c5c;
+              font-weight: bold;
+              vertical-align: top;
+              margin: 5px 0 0 5px; }
+            body main #step4 .switch--final--other--switches--list .switches__display--item:hover img {
+              border: 1px solid #da571e; }
+            body main #step4 .switch--final--other--switches--list .switches__display--item:hover figcaption {
+              color: #da571e; }
+        body main #step4 .switch--final--other--modules--list {
+          list-style: none; }
+          body main #step4 .switch--final--other--modules--list li {
+            margin-bottom: 15px; }
+            body main #step4 .switch--final--other--modules--list li img {
+              width: 25%;
+              display: inline-block;
+              border: 1px solid #e4e4e3; }
+            body main #step4 .switch--final--other--modules--list li figcaption {
+              display: inline-block;
+              width: 70%;
+              color: #364c5c;
+              font-weight: bold;
+              vertical-align: top;
+              margin: 5px 0 0 5px; }
+            body main #step4 .switch--final--other--modules--list li:hover img {
+              border: 1px solid #da571e; }
+            body main #step4 .switch--final--other--modules--list li:hover figcaption {
+              color: #da571e; }
+      body main #step4 .switch--final--cta {
+        margin-top: 30px; }
+        body main #step4 .switch--final--cta button {
+          display: block;
+          margin: 0 auto 20px; }
+        body main #step4 .switch--final--cta .hide {
+          display: none; }
+    body main #step4 .popup {
+      position: absolute;
+      background: #364c5cc7;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      z-index: 999; }
+      body main #step4 .popup.hidden {
+        display: none; }
+      body main #step4 .popup .close {
+        position: absolute;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background: url(../images/close.png) no-repeat;
+        background-size: contain;
+        top: 100px;
+        right: 100px;
+        cursor: pointer;
+        z-index: 999; }
+      body main #step4 .popup .saveForm {
+        display: inline-block;
+        align-self: center;
+        width: 400px;
+        height: 200px; }
+        body main #step4 .popup .saveForm label {
+          color: #fff;
+          text-transform: uppercase;
+          font-weight: bold; }
+        body main #step4 .popup .saveForm input {
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          height: 60px;
+          font-weight: 700;
+          font-size: 16px;
+          outline: none;
+          cursor: pointer;
+          text-align: center; }
+          body main #step4 .popup .saveForm input.submit {
+            background: #364c5c;
+            color: #fff;
+            border: none;
+            transition: 0.6s ease-in-out; }
+            body main #step4 .popup .saveForm input.submit:hover {
+              transform: scale(1.1); }
+        body main #step4 .popup .saveForm.hide {
+          display: none; }
+      body main #step4 .popup input.hidden {
+        visibility: hidden;
+        height: 5px; }
+      body main #step4 .popup .loading-image {
+        display: block;
+        position: fixed;
+        width: 70px;
+        height: 110px;
+        background: url("../images/tenor.gif") no-repeat top center;
+        background-size: contain;
+        align-self: center;
+        visibility: visible;
+        z-index: 100; }
+        body main #step4 .popup .loading-image.hide {
+          display: none; }
+      body main #step4 .popup .status-msg {
+        align-self: center;
+        color: #fff;
+        font-size: 28px; }
+        body main #step4 .popup .status-msg.hide {
+          display: none; }
